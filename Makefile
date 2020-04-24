@@ -25,5 +25,5 @@ build:
 	$(info "Packaging blueprint artifacts...")
 	@ tar -cvzf $(REPO_NAME).tar.gz .
 	$(info "Copying blueprint artifacts...")
-	@ curl -uadmin:password -T $(REPO_NAME).tar.gz "http://$(ARTIFACTORY_INSTANCE):8081/artifactory/$(REPO_NAME)-local-repo/$(REL_PROJECT)/$(REPO_NAME).tar.gz"
+	@ curl -u$$ARTIFACTORY_USER:$$ARTIFACTORY_PASSWORD -T $(REPO_NAME).tar.gz "http://$(ARTIFACTORY_INSTANCE):8081/artifactory/$(REPO_NAME)-local-repo/$(REL_PROJECT)/$(REPO_NAME).tar.gz"
 	$(info "Build complete")
