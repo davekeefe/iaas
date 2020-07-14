@@ -60,7 +60,7 @@ class IaaSAhvVmResources(AhvVmResources):
         AhvVmDisk.Disk.Scsi.cloneFromVMDiskPackage(Centos74_Image, bootable=True)
     ]
     nics = [
-        AhvVmNic.NormalNic("DRMPOC05_DEV"),
+        AhvVmNic.NormalNic("vLAN_115"),
     ]
     boot_type = "BIOS"
 
